@@ -35,7 +35,7 @@ integer_RDD.glom().collect()
 text_RDD = sc.textFile("file:///home/cloudera/testfile1")
 
 # Read data from HDFS
-sc.textFile("/user/cloudera/input/testfile1")
+text_RDD = sc.textFile("/user/cloudera/input/testfile1")
 
 # Outputs the first line
 text_RDD.take(1)
