@@ -3,6 +3,9 @@
 This post will cover the following points:
 - what is RDD  
 - how to manipulate RDD using _pyspark API_ (mapreduce example)
+- Some RDD actions
+- Caching data 
+- Shared Variables
 
 
 **What is Resilient Distributed Dataset**  
@@ -63,5 +66,16 @@ wordcounts_RDD = pairs_RDD.reduceByKey(sum_counts)
 # Show result
 wordcounts_RDD.collect()
 ```
+
+**Some RDD actions**
+- rdd_name.copy: copy all elements to the driver
+- rdd_name.take(n): copy first n elements
+- rdd_name.reduce(func) - aggregate elements with func (takes 2 elements, returns 1)
+- rdd_name.saveAsTextFile(filename) - save to local file or HDFS
+
+directed acyclic graph (DAG)
+
+
+
 
 
