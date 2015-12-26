@@ -1,9 +1,9 @@
 ## hadoop-Spark-RDD
 
 This post will cover the following points:
-- what is RDD
+- what is RDD  
 - how to manipulate RDD using _pyspark API_
-- 
+
 
 **What is Resilient Distributed Dataset**
 RDD is the data container, the way in Spark to store data like variable or object in programming.
