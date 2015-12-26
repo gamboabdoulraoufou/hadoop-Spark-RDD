@@ -6,6 +6,7 @@ This post will cover the following points:
 - Some RDD actions
 - Caching data 
 - Shared Variables
+- Accumulator
 
 
 **What is Resilient Distributed Dataset**  
@@ -75,7 +76,24 @@ wordcounts_RDD.collect()
 
 directed acyclic graph (DAG)
 
+**Caching data**  
+Once you have prepared your data for your iterative algorithm, for example, a machine learning algorithm, it's a good idea to cache that data. So that each iteration of your algorithm can read data from memory and be very fast.
 
+```python
+rdd_name.cache()
+```
 
+**Shared Variables**    
+```python
+config = sc.broadcast({"order":3, "filter":True})
+config.value
+```
 
-
+**Accumulator**  
+```python
+accum = sc.accumulator(0)
+def test_accum(x):
+accum.add(x)
+sc.parallelize([1, 2, 3, 4]).foreach(test_accum)
+accum.value
+```
