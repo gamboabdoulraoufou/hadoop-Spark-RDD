@@ -9,7 +9,7 @@ This post will cover the following points:
 - Accumulator
 
 
-**What is Resilient Distributed Dataset**  
+**What is RDD (Resilient Distributed Dataset)**  
 RDD is the data container, the way in Spark to store data like variable or object in programming.
 Data can be read from local text file, HDFS or other source. 
   
