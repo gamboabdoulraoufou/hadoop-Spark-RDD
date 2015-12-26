@@ -2,7 +2,7 @@
 
 This post will cover the following points:
 - what is RDD  
-- how to manipulate RDD using _pyspark API_
+- how to manipulate RDD using _pyspark API_ (mapreduce example)
 
 
 **What is Resilient Distributed Dataset**  
@@ -15,13 +15,12 @@ Caracteristiques:
 - Resilient: for every point in your calculations, Spark knows which are the partitions needed to recreate the partition in case it gets lost. And if that happens, then spark automatically figures out where it can start from to recompute what's the minimum amount of processing needed to recover the lost partition
 
 **RDD manipulation**  
-***Create RDD***   
 Go to your shell console and tape this command
 ```sh
 pyspark
 ```
 
-Now you are in Python Spark shell console
+Create RDD
 ```python
 # Create RDD in 3 partitions
 integer_RDD = sc.parallelize(range(10), 3)
@@ -43,8 +42,7 @@ text_RDD.take(1)
 
 ```
 
-***Word count in spark***
-
+Word count in spark  
 ```python
 # map functions
 def split_words(line):
