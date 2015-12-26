@@ -5,7 +5,7 @@ This post will cover the following points:
 - how to manipulate RDD using _pyspark API_
 
 
-**What is Resilient Distributed Dataset**
+**What is Resilient Distributed Dataset**  
 RDD is the data container, the way in Spark to store data like variable or object in programming.
 Data can be read from local text file, HDFS or other source.
 Caracteristiques:
@@ -14,8 +14,8 @@ Caracteristiques:
 - Resilient: for every point in your calculations, Spark knows which are the partitions needed to recreate the partition in case it gets lost. And if that happens, then spark automatically figures out where it can start from to recompute what's the minimum amount of processing needed to recover the lost partition
 - 
 
-**RDD manipulation**
-***Create RDD***  
+**RDD manipulation**  
+***Create RDD***   
 Go to your shell console and tape this command
 ```sh
 pyspark
