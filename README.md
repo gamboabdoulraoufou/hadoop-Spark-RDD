@@ -1,4 +1,4 @@
-## hadoop-Spark-RDD
+## hadoop-Spark RDD
 
 This post will cover the following points:
 - what is RDD  
