@@ -7,7 +7,7 @@ This post will cover the following points:
 
 **What is Resilient Distributed Dataset**  
 RDD is the data container, the way in Spark to store data like variable or object in programming.
-Data can be read from local text file, HDFS or other source.
+Data can be read from local text file, HDFS or other source.  
 Caracteristiques:
 - Immutable: you cannot change just a section of RDD. But every time you transform one RDD, you create a new one.
 - Distributed: partition of data are divided accross machine
