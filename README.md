@@ -74,7 +74,6 @@ wordcounts_RDD.collect()
 - rdd_name.reduce(func) - aggregate elements with func (takes 2 elements, returns 1)
 - rdd_name.saveAsTextFile(filename) - save to local file or HDFS
 
-directed acyclic graph (DAG)
 
 **Caching data**  
 Once you have prepared your data for your iterative algorithm, for example, a machine learning algorithm, it's a good idea to cache that data. So that each iteration of your algorithm can read data from memory and be very fast.
@@ -92,8 +91,10 @@ config.value
 **Accumulator**  
 ```python
 accum = sc.accumulator(0)
+
 def test_accum(x):
-accum.add(x)
+    accum.add(x)
+    
 sc.parallelize([1, 2, 3, 4]).foreach(test_accum)
 accum.value
 ```
